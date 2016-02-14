@@ -3082,4 +3082,9 @@
   <!-- Ambient display music -->
   <java-symbol type="bool" name="config_canForceDozeNotifications" />
 
+  <!-- Hardware key binding -->
+  <java-symbol type="anim" name="custom_app_in" />
+  <java-symbol type="anim" name="custom_app_out" />
+  <java-symbol type="integer" name="config_deviceHardwareKeys" />
+
 </resources>
