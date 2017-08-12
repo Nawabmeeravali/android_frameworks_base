@@ -3996,6 +3996,7 @@ public final class PowerManagerService extends SystemService
                 case MSG_WAKE_UP:
                     cleanupProximity();
                     ((Runnable) msg.obj).run();
+                    break;
                 case MSG_BUTTON_TIMEOUT:
                     if (DEBUG) {
                         Slog.d(TAG, "button timeout triggered");
