@@ -21,6 +21,7 @@ import android.app.WallpaperManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.os.PowerManager;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -97,6 +98,7 @@ public class GlobalActionsImpl implements GlobalActions {
         bar.getIndeterminateDrawable().setTint(color);
         TextView message = d.findViewById(R.id.text1);
         message.setTextColor(color);
+	message.setTypeface(Typeface.create("google-sans",Typeface.NORMAL));
         if (rebootCustom) {
             if (reason != null) {
                 if (PowerManager.REBOOT_BOOTLOADER.equals(reason)) {
