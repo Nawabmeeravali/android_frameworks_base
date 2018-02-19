@@ -54,7 +54,7 @@ public class AmbientIndicationContainer extends AutoReinflateContainer implement
     public void setDozing(boolean dozing) {
         mDozing = dozing;
         setVisibility(dozing ? View.VISIBLE : View.INVISIBLE);
-        updatePosition()
+        updatePosition();
     }
 
     public void setCleanLayout(int reason) {
