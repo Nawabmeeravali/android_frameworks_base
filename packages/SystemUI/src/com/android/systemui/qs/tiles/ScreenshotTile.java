@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2014 The Android Open Source Project
  * Copyright (C) 2012-2015 The CyanogenMod Project
- * Copyright 2014-2015 The Euphoria-OS Project
+ * Copyright (C) 2014-2015 The Euphoria-OS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,16 +29,12 @@ import android.os.Messenger;
 import android.os.RemoteException;
 import android.view.View;
 
-import com.android.internal.logging.MetricsLogger;
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-
+import com.android.systemui.R;
 import com.android.systemui.plugins.qs.QSTile.BooleanState;
-import com.android.systemui.qs.GlobalSetting;
 import com.android.systemui.qs.QSHost;
 import com.android.systemui.qs.tileimpl.QSTileImpl;
 import com.android.systemui.screenshot.TakeScreenshotService;
-
-import com.android.systemui.R;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
 /** Quick settings tile: Screenshot **/
 public class ScreenshotTile extends QSTileImpl<BooleanState> {
@@ -62,11 +58,23 @@ public class ScreenshotTile extends QSTileImpl<BooleanState> {
     }
 
     @Override
-    public void handleClick() {
+    protected void handleClick() {
         mHost.collapsePanels();
         /* wait for the panel to close */
         try {
-             Thread.sleep(2000);
+             Thread.sleep(1500);
+        } catch (InterruptedException ie) {
+             // Do nothing
+        }
+        takeScreenshot();
+    }
+
+    @Override
+    public void handleLongClick() {
+        mHost.collapsePanels();
+        /* wait for the panel to close */
+        try {
+             Thread.sleep(1500);
         } catch (InterruptedException ie) {
              // Do nothing
         }
@@ -75,14 +83,15 @@ public class ScreenshotTile extends QSTileImpl<BooleanState> {
 
     @Override
     public Intent getLongClickIntent() {
-        return new Intent().setComponent(new ComponentName(
-            "com.android.gallery3d", "com.android.gallery3d.app.GalleryActivity"));
+        return null;
     }
 
     @Override
     protected void handleUpdateState(BooleanState state, Object arg) {
         state.label = mContext.getString(R.string.quick_settings_screenshot_label);
         state.icon = ResourceIcon.get(R.drawable.ic_qs_screenshot);
+        state.contentDescription =  mContext.getString(
+                   R.string.quick_settings_screenshot_label);
     }
 
     @Override
@@ -92,7 +101,7 @@ public class ScreenshotTile extends QSTileImpl<BooleanState> {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.QUICK_SETTINGS;
+        return MetricsEvent.SCREENSHOT_TILE;
     }
 
     final Runnable mScreenshotTimeout = new Runnable() {
