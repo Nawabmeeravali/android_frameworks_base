@@ -65,6 +65,8 @@ public class KeyguardHostView extends FrameLayout implements SecurityCallback {
     private OnDismissAction mDismissAction;
     private Runnable mCancelAction;
 
+    private KeyguardUpdateMonitor mKeyguardUpdateMonitor;
+
     private final KeyguardUpdateMonitorCallback mUpdateCallback =
             new KeyguardUpdateMonitorCallback() {
 
