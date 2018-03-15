@@ -318,11 +318,6 @@
             android:exported="false">
         </activity>
 
-        <!-- Callback for editing screenshot notification -->
-        <receiver android:name=".screenshot.GlobalScreenshot$EditScreenshotReceiver"
-                  android:process=":screenshot"
-                  android:exported="false" />
-
         <!-- Springboard for launching the share activity -->
         <receiver android:name=".screenshot.GlobalScreenshot$ShareReceiver"
             android:process=":screenshot"
