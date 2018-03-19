@@ -392,6 +392,13 @@ final class DefaultPermissionGrantPolicy {
                 }
             }
 
+            // Markup
+            PackageParser.Package markupPackage = getSystemPackageLPr(
+                    "com.google.android.markup");
+            if (markupPackage != null && doesPackageSupportRuntimePermissions(markupPackage)) {
+                grantRuntimePermissionsLPw(markupPackage, STORAGE_PERMISSIONS, userId);
+            }
+
             // Sim call manager
             if (simCallManagerPackageNames != null) {
                 for (String simCallManagerPackageName : simCallManagerPackageNames) {
