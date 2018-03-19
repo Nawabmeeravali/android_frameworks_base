@@ -2077,9 +2077,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             case SPLIT_SCREEN:
                 toggleSplitScreen();
                 break;
-            case SCREENSHOT:
-                takeScreenshot(TAKE_SCREENSHOT_FULLSCREEN);
-                break;
             default:
                 break;
         }
