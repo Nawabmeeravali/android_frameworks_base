@@ -166,7 +166,7 @@ public class ScreenshotTile extends QSTileImpl<BooleanState> {
 
             if (mContext.bindService(intent, conn, mContext.BIND_AUTO_CREATE)) {
                 mScreenshotConnection = conn;
-                mHandler.postDelayed(mScreenshotTimeout, 7500);
+                mHandler.postDelayed(mScreenshotTimeout, 5500);
             }
         }
     }
