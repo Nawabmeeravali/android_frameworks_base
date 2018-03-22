@@ -611,4 +611,6 @@
     -->
     <dimen name="autofill_save_icon_max_size">300dp</dimen>
 
+    <!-- Revenge starts here -->
+    <dimen name="control_corner_material">50.0dip</dimen>
 </resources>
