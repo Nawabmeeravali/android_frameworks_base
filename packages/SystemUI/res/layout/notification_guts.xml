@@ -23,4 +23,5 @@
     android:visibility="gone"
     android:clickable="true"
     android:gravity="top|start"
+    android:radius="15dp"
     android:theme="@*android:style/Theme.DeviceDefault.Light"/>
