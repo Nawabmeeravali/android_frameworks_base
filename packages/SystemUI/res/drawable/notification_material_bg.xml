@@ -19,9 +19,7 @@
         android:color="@color/notification_ripple_untinted_color">
     <item>
         <shape>
-            <solid android:color="@*com.android.systemui:color/notification_material_background_color" />
-            <corners android:bottomLeftRadius="@*android:dimen/control_corner_material" android:bottomRightRadius="@*android:dimen/control_corner_material"
-                android:topLeftRadius="@*android:dimen/control_corner_material" android:topRightRadius="@*android:dimen/control_corner_material" />
+            <solid android:color="@color/notification_material_background_color" />
         </shape>
     </item>
 </ripple>
