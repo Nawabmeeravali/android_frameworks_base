@@ -309,7 +309,7 @@
     <dimen name="qs_detail_icon_overlay_size">24dp</dimen>
 
     <dimen name="segmented_button_spacing">0dp</dimen>
-    <dimen name="borderless_button_radius">2dp</dimen>
+    <dimen name="borderless_button_radius">5dp</dimen>
 
     <dimen name="restricted_padlock_pading">4dp</dimen>
 
@@ -349,13 +349,13 @@
     <dimen name="min_stack_height">104dp</dimen>
 
     <!-- Z distance between notifications if they are in the stack -->
-    <dimen name="z_distance_between_notifications">0.5dp</dimen>
+    <dimen name="z_distance_between_notifications">2dp</dimen>
 
     <!-- The height of the divider between the individual notifications. -->
     <dimen name="notification_divider_height">0.5dp</dimen>
 
     <!-- The corner radius of the shadow behind the notification. -->
-    <dimen name="notification_shadow_radius">0dp</dimen>
+    <dimen name="notification_shadow_radius">@*android:dimen/control_corner_material</dimen>
 
     <!-- The alpha of the dividing line between child notifications of a notification group. -->
     <item name="notification_divider_alpha" format="float" type="dimen">0.5</item>
@@ -758,8 +758,8 @@
 
     <!-- The radius of the rounded corners on a task view and its shadow (which can be larger
          to create a softer corner effect. -->
-    <dimen name="recents_task_view_rounded_corners_radius">2dp</dimen>
-    <dimen name="recents_task_view_shadow_rounded_corners_radius">6dp</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius">@*android:dimen/control_corner_material</dimen>
+    <dimen name="recents_task_view_shadow_rounded_corners_radius">@*android:dimen/control_corner_material</dimen>
 
     <!-- The amount of highlight to make on each task view. -->
     <dimen name="recents_task_view_highlight">1dp</dimen>
