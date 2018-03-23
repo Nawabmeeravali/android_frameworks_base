@@ -309,7 +309,7 @@
     <dimen name="qs_detail_icon_overlay_size">24dp</dimen>
 
     <dimen name="segmented_button_spacing">0dp</dimen>
-    <dimen name="borderless_button_radius">5dp</dimen>
+    <dimen name="borderless_button_radius">2dp</dimen>
 
     <dimen name="restricted_padlock_pading">4dp</dimen>
 
@@ -349,7 +349,7 @@
     <dimen name="min_stack_height">104dp</dimen>
 
     <!-- Z distance between notifications if they are in the stack -->
-    <dimen name="z_distance_between_notifications">2dp</dimen>
+    <dimen name="z_distance_between_notifications">5dp</dimen>
 
     <!-- The height of the divider between the individual notifications. -->
     <dimen name="notification_divider_height">0.5dp</dimen>
