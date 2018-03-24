@@ -20,8 +20,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#00000000"
-    android:radius="12dp"
     android:tag="media"
     >
     <ImageView android:id="@+id/right_icon"
@@ -39,7 +37,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:radius="12dp"
         android:layout_marginStart="@dimen/notification_content_margin_start"
         android:layout_marginTop="@dimen/notification_content_margin_top"
         android:tag="media"
