@@ -17,18 +17,18 @@
 */
 -->
 
-<set xmlns:android="http://schemas.android.com/apk/res/android"
-        android:shareInterpolator="false" android:zAdjustment="top">
-
-    <alpha android:fromAlpha="0" android:toAlpha="1.0"
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:shareInterpolator="false">
+    <translate android:fromXDelta="-105%" android:toXDelta="0%"
+        android:interpolator="@interpolator/agressive_ease"
+        android:startOffset="50"
+        android:fillEnabled="true" android:fillBefore="true" android:fillAfter="true" 
+        android:duration="383"/>
+    <scale android:fromXScale="1.0526" android:toXScale="1.0" android:fromYScale="1.0526" android:toYScale="1.0" android:pivotX="50%" android:pivotY="50%"
             android:fillEnabled="true" android:fillBefore="true" android:fillAfter="true"
-            android:interpolator="@interpolator/decelerate_quart"
-            android:startOffset="300"
-            android:duration="167"/>
-
-    <translate android:fromYDelta="110%" android:toYDelta="0"
+            android:interpolator="@interpolator/fast_out_slow_in"
+            android:duration="283"/>
+    <scale android:fromXScale="0.95" android:toXScale="1.0" android:fromYScale="0.59" android:toYScale="1.0" android:pivotX="50%" android:pivotY="50%"
             android:fillEnabled="true" android:fillBefore="true" android:fillAfter="true"
-            android:interpolator="@interpolator/decelerate_quint"
-            android:startOffset="300"
-            android:duration="417" />
+            android:interpolator="@interpolator/fast_out_slow_in"
+            android:duration="317"/>
 </set>

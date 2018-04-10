@@ -6285,6 +6285,17 @@
         <attr name="toAlpha" format="float" />
     </declare-styleable>
 
+    <declare-styleable name="ClipRectAnimation">
+        <attr name="fromL" format="float" />
+        <attr name="fromT" format="float" />
+        <attr name="fromR" format="float" />
+        <attr name="fromB" format="float" />
+        <attr name="toL" format="float" />
+        <attr name="toT" format="float" />
+        <attr name="toR" format="float" />
+        <attr name="toB" format="float" />
+    </declare-styleable>
+
     <declare-styleable name="LayoutAnimation">
         <!-- Fraction of the animation duration used to delay the beginning of
          the animation of each child. -->

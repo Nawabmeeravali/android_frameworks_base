@@ -17,26 +17,18 @@
 */
 -->
 
-<set xmlns:android="http://schemas.android.com/apk/res/android"
-        android:shareInterpolator="false" android:zAdjustment="normal">
-
-    <alpha android:fromAlpha="0.6" android:toAlpha="1.0"
-            android:fillEnabled="true" android:fillBefore="true" android:fillAfter="true"
-            android:interpolator="@interpolator/decelerate_cubic"
-            android:startOffset="600"
-            android:duration="133"/>
-
-    <translate android:fromYDelta="10%" android:toYDelta="0"
-            android:fillEnabled="true" android:fillBefore="true" android:fillAfter="true"
-            android:interpolator="@interpolator/decelerate_cubic"
-            android:startOffset="300"
-            android:duration="433" />
-
-    <scale android:fromXScale=".9" android:toXScale="1.0"
-            android:fromYScale=".9" android:toYScale="1.0"
-            android:pivotX="50%p" android:pivotY="0%p"
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:shareInterpolator="false">
+    <translate android:fromXDelta="105%" android:toXDelta="0%"
+        android:interpolator="@interpolator/agressive_ease"
+        android:startOffset="50"
+        android:fillEnabled="true" android:fillBefore="true" android:fillAfter="true" 
+        android:duration="383"/>
+    <scale android:fromXScale="1.0526" android:toXScale="1.0" android:fromYScale="1.0526" android:toYScale="1.0" android:pivotX="50%" android:pivotY="50%"
             android:fillEnabled="true" android:fillBefore="true" android:fillAfter="true"
             android:interpolator="@interpolator/fast_out_slow_in"
-            android:startOffset="300"
-            android:duration="433" />
+            android:duration="283"/>
+    <scale android:fromXScale="0.95" android:toXScale="1.0" android:fromYScale="0.59" android:toYScale="1.0" android:pivotX="50%" android:pivotY="50%"
+            android:fillEnabled="true" android:fillBefore="true" android:fillAfter="true"
+            android:interpolator="@interpolator/fast_out_slow_in"
+            android:duration="317"/>
 </set>

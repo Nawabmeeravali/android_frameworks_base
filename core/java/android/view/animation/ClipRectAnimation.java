@@ -16,8 +16,11 @@
 
 package android.view.animation;
 
+import android.content.Context;
+import android.content.res.TypedArray
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.util.AttributeSet;
 
 /**
  * An animation that controls the clip of an object. See the
@@ -33,6 +36,38 @@ public class ClipRectAnimation extends Animation {
     protected Rect mToRect = new Rect();
     protected Rect mResolvedFrom = new Rect();
     protected Rect mResolvedTo = new Rect();
+    protected float mFromL = 0.0f;
+    protected float mFromT = 0.0f;
+    protected float mFromR = 0.0f;
+    protected float mFromB = 0.0f;
+    protected float mtoL = 0.0f;
+    protected float mtoT = 0.0f;
+    protected float mtoR = 0.0f;
+    protected float mtoB = 0.0f;
+
+    /**
+     * Constructor used when an ClipRectAnimation is loaded from a resource. 
+     * 
+     * @param context Application context to use
+     * @param attrs Attribute set from which to read values
+     */
+    public ClipRectAnimation(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        
+        TypedArray a =
+            context.obtainStyledAttributes(attrs, com.android.internal.R.styleable.ClipRectAnimation);
+        
+        fromL = a.getFloat(com.android.internal.R.styleable.ClipRectAnimation_fromL, 1.0f);
+        fromT = a.getFloat(com.android.internal.R.styleable.ClipRectAnimation_fromT, 1.0f);
+        fromR = a.getFloat(com.android.internal.R.styleable.ClipRectAnimation_fromR, 1.0f);
+        fromB = a.getFloat(com.android.internal.R.styleable.ClipRectAnimation_fromB, 1.0f);
+        toL = a.getFloat(com.android.internal.R.styleable.ClipRectAnimation_fromL, 1.0f);
+        toT = a.getFloat(com.android.internal.R.styleable.ClipRectAnimation_fromT, 1.0f);
+        toR = a.getFloat(com.android.internal.R.styleable.ClipRectAnimation_fromR, 1.0f);
+        toB = a.getFloat(com.android.internal.R.styleable.ClipRectAnimation_fromB, 1.0f);
+        
+        a.recycle();
+}
 
     /**
      * Constructor to use when building a ClipRectAnimation from code
