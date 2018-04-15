@@ -2620,7 +2620,7 @@ public class NotificationPanelView extends PanelView implements
             mDoubleTapToSleepEnabled = Settings.System.getInt(
                     resolver, Settings.System.DOUBLE_TAP_SLEEP_GESTURE, 1) == 1;
             mDoubleTapToSleepAnywhere = Settings.System.getInt(
-                    resolver, Settings.System.DOUBLE_TAP_SLEEP_ANYWHERE, 0) == 1;
+                    resolver, Settings.System.DOUBLE_TAP_SLEEP_ANYWHERE, 1) == 1;
         }
     }
 

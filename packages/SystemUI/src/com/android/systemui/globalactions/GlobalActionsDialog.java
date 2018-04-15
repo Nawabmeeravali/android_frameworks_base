@@ -420,7 +420,7 @@ class GlobalActionsDialog implements DialogInterface.OnDismissListener, DialogIn
                 }
             } else if (GLOBAL_ACTION_KEY_LOCKDOWN.equals(actionKey)) {
                 if (Settings.System.getInt(mContext.getContentResolver(),
-                        Settings.System.GLOBAL_ACTIONS_LOCKDOWN, 0) != 0) {
+                        Settings.System.GLOBAL_ACTIONS_LOCKDOWN, 1) != 0) {
                     mItems.add(getLockdownAction());
                 }
             } else if (GLOBAL_ACTION_KEY_VOICEASSIST.equals(actionKey)) {
@@ -438,7 +438,7 @@ class GlobalActionsDialog implements DialogInterface.OnDismissListener, DialogIn
                 mItems.add(new RebootBootloaderAction());
             } else if (GLOBAL_ACTION_KEY_SCREENSHOT.equals(actionKey)) {
                 if (Settings.System.getInt(mContext.getContentResolver(),
-                        Settings.System.GLOBAL_ACTIONS_SCREENSHOT, 0) == 1) {
+                        Settings.System.GLOBAL_ACTIONS_SCREENSHOT, 1) == 1) {
                     mItems.add(getScreenshotAction());
                 }
             } else if (GLOBAL_ACTION_KEY_FLASHLIGHT.equals(actionKey)) {
