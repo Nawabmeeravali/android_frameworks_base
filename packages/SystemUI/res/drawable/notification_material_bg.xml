@@ -19,7 +19,7 @@
         android:color="@color/notification_ripple_untinted_color">
     <item>
         <shape>
-            <solid android:color="@color/qs_background_dark" />
+            <solid android:color="@color/notification_material_background_color" />
         </shape>
     </item>
 </ripple>
