@@ -611,4 +611,6 @@
     -->
     <dimen name="autofill_save_icon_max_size">300dp</dimen>
 
+    <dimen name="rounding">12dp</dimen>
+
 </resources>

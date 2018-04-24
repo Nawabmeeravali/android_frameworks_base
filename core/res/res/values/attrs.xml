@@ -3941,6 +3941,12 @@
     </declare-styleable>
     <declare-styleable name="ImageSwitcher">
     </declare-styleable>
+    <declare-styleable name="RoundedImageView">
+        <attr name="topLeftRadius" format="dimension"/>
+        <attr name="topRightRadius" format="dimension"/>
+        <attr name="bottomLeftRadius" format="dimension"/>
+        <attr name="bottomRightRadius" format="dimension"/>
+    </declare-styleable>
     <declare-styleable name="ImageView">
         <!-- Sets a drawable as the content of this ImageView. -->
         <attr name="src" format="reference|color" />
