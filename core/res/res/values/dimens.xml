@@ -172,7 +172,7 @@
     <dimen name="notification_extra_margin_ambient">16dp</dimen>
 
     <!-- The height of the notification action list -->
-    <dimen name="notification_action_list_height">56dp</dimen>
+    <dimen name="notification_action_list_height">52dp</dimen>
 
     <!-- height of the content margin to accomodate for the header -->
     <dimen name="notification_content_margin_top">37.5dp</dimen>

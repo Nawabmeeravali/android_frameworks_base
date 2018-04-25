@@ -29,9 +29,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_gravity="top|end"
-        android:scaleType="centerCrop"
-        android:radius="@*com.android.systemui:dimen/recents_task_view_rounded_corners_radius"
-    />
+        android:scaleType="centerCrop" />
     <include layout="@layout/notification_template_header"
         android:layout_width="match_parent"
         android:layout_height="@dimen/media_notification_header_height"

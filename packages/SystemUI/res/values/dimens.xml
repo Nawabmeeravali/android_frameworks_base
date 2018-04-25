@@ -226,7 +226,7 @@
     <dimen name="standard_notification_panel_width">416dp</dimen>
 
     <!-- The top margin of the panel that holds the list of notifications. -->
-    <dimen name="notification_panel_margin_top">0dp</dimen>
+    <dimen name="notification_panel_margin_top">5dp</dimen>
 
     <!-- The bottom margin of the panel that holds the list of notifications. -->
     <dimen name="notification_panel_margin_bottom">0dp</dimen>
@@ -349,7 +349,7 @@
     <dimen name="min_stack_height">104dp</dimen>
 
     <!-- Z distance between notifications if they are in the stack -->
-    <dimen name="z_distance_between_notifications">0.5dip</dimen>
+    <dimen name="z_distance_between_notifications">5dip</dimen>
 
     <!-- The height of the divider between the individual notifications. -->
     <dimen name="notification_divider_height">0.5dip</dimen>
@@ -758,8 +758,8 @@
 
     <!-- The radius of the rounded corners on a task view and its shadow (which can be larger
          to create a softer corner effect. -->
-    <dimen name="recents_task_view_rounded_corners_radius">8.0dip</dimen>
-    <dimen name="recents_task_view_shadow_rounded_corners_radius">8.0dip</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius">12.0dip</dimen>
+    <dimen name="recents_task_view_shadow_rounded_corners_radius">13.0dip</dimen>
     <dimen name="tooltip_corner_radius">8.0dip</dimen>
 
     <!-- The amount of highlight to make on each task view. -->
