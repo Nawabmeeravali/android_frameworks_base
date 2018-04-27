@@ -89,13 +89,15 @@ public final class ColorUtils {
      * <a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef">here</a>.
      */
     public static double calculateContrast(@ColorInt int foreground, @ColorInt int background) {
+        int mbackground = background;
+        setAlphaComponent(mbackground, 255);
         if (Color.alpha(foreground) < 255) {
             // If the foreground is translucent, composite the foreground over the background
-            foreground = compositeColors(foreground, Color.WHITE);
+            foreground = compositeColors(foreground, mbackground);
         }
 
         final double luminance1 = calculateLuminance(foreground) + 0.05;
-        final double luminance2 = calculateLuminance(Color.WHITE) + 0.05;
+        final double luminance2 = calculateLuminance(mbackground) + 0.05;
 
         // Now return the lighter luminance divided by the darker luminance
         return Math.max(luminance1, luminance2) / Math.min(luminance1, luminance2);
