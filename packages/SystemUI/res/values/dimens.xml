@@ -226,7 +226,7 @@
     <dimen name="standard_notification_panel_width">416dp</dimen>
 
     <!-- The top margin of the panel that holds the list of notifications. -->
-    <dimen name="notification_panel_margin_top">5dp</dimen>
+    <dimen name="notification_panel_margin_top">7dp</dimen>
 
     <!-- The bottom margin of the panel that holds the list of notifications. -->
     <dimen name="notification_panel_margin_bottom">0dp</dimen>
@@ -349,7 +349,7 @@
     <dimen name="min_stack_height">104dp</dimen>
 
     <!-- Z distance between notifications if they are in the stack -->
-    <dimen name="z_distance_between_notifications">0dip</dimen>
+    <dimen name="z_distance_between_notifications">5dip</dimen>
 
     <!-- The height of the divider between the individual notifications. -->
     <dimen name="notification_divider_height">0.5dip</dimen>
@@ -653,7 +653,7 @@
     <dimen name="volume_slider_interspacing">8dp</dimen>
 
     <!-- Volume dialog vertical offset from the top of the screen -->
-    <dimen name="volume_offset_top">0dp</dimen>
+    <dimen name="volume_offset_top">15dp</dimen>
 
     <!-- Standard image button size for volume dialog buttons -->
     <dimen name="volume_button_size">48dp</dimen>
