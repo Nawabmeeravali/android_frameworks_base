@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright (C) 2017 The LineageOS Project
-
-    Licensed under the Apache License, Version 2.0 (the "License");
+Copyright (C) 2017 The Android Open Source Project
+   Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
+         http://www.apache.org/licenses/LICENSE-2.0
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -15,13 +11,13 @@
     limitations under the License.
 -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        android:width="24dp"
-        android:height="24dp"
-        android:viewportWidth="24.0"
-        android:viewportHeight="24.0"
-        android:tint="?android:attr/colorControlNormal">
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
 
     <path
-        android:fillColor="#FFFFFFFF"
-        android:pathData="M10.85,12.65h2.3L12,9l-1.15,3.65zM20,8.69V4h-4.69L12,0.69 8.69,4H4v4.69L0.69,12 4,15.31V20h4.69L12,23.31 15.31,20H20v-4.69L23.31,12 20,8.69zM14.3,16l-0.7,-2h-3.2l-0.7,2H7.8L11,7h2l3.2,9h-1.9z"/>
+        android:fillColor="?android:attr/colorControlNormal"
+        android:strokeWidth="1.08272243"
+        android:pathData="M 12.000002,2.6826679 A 9.3178349,9.3178349 0 0 0 2.682668,12 9.3178349,9.3178349 0 0 0 12.000002,21.317332 9.3178349,9.3178349 0 0 0 21.317332,12 9.3178349,9.3178349 0 0 0 12.000002,2.6826679 Z m -1.082723,3.9037214 h 2.165443 l 3.463866,9.7445007 h -2.05548 L 13.731932,14.165447 H 10.268069 L 9.5088945,16.33089 H 7.4534128 Z m 1.082723,2.1654448 -1.245554,3.9523589 h 2.491108 z" />
 </vector>
