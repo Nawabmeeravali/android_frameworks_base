@@ -22,7 +22,7 @@
     android:background="@drawable/volume_dialog_background"
     android:paddingTop="@dimen/volume_dialog_padding_top"
     android:theme="@style/qs_theme"
-    android:translationZ="0dp" >
+    android:translationZ="2dp" >
 
     <LinearLayout
         android:id="@+id/volume_dialog_content"
