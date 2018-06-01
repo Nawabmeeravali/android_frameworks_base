@@ -152,4 +152,8 @@
 
     <color name="zen_introduction">#ffffffff</color>
 
+    <!-- QSPanel Tiles Colors -->
+    <color name="qs_tiles_inactive_color">#595959</color>
+    <color name="qs_tiles_unavailable_color">#706f6f</color>
+
 </resources>

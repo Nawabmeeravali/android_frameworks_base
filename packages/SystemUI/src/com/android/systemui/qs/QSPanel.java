@@ -22,6 +22,8 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.database.ContentObserver;
+import android.graphics.drawable.Drawable;
 import android.metrics.LogMaker;
 import android.os.Handler;
 import android.os.Message;
@@ -93,6 +95,9 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
     private ImageView mMirrorAutoBrightnessView;
     private View mDivider;
 
+    private Drawable mQsPanelBackGround;
+    private View mQSFooter;
+
     public QSPanel(Context context) {
         this(context, null);
     }
@@ -121,6 +126,15 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
         mFooter = new QSSecurityFooter(this, context);
         addView(mFooter.getView());
 
+        mQSFooter = LayoutInflater.from(context).inflate(
+        R.layout.qs_footer_impl, this, false);
+        addView(mQSFooter);
+
+        LinearLayout mSpacer = new LinearLayout(context);
+        LayoutParams lp = new LayoutParams(LayoutParams.MATCH_PARENT, 8);
+        mSpacer.setLayoutParams(lp);
+        addView(mSpacer);
+
         updateResources();
 
         mBrightnessController = new BrightnessController(getContext(),
@@ -128,6 +142,9 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
                 findViewById(R.id.brightness_slider));
 
         mAutoBrightnessView = (ImageView) findViewById(R.id.brightness_icon);
+
+        mQsPanelBackGround = context.getDrawable(R.drawable.qs_background_primary);
+                setBackground(mQsPanelBackGround);
     }
 
     protected void addDivider() {
