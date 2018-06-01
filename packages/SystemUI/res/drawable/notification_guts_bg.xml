@@ -13,10 +13,15 @@
   ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License
-  -->
-
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/notification_guts_bg_color" />
-    <!--Androip P-ify-->
-    <corners android:radius="@*com.android.systemui:dimen/recents_task_view_rounded_corners_radius" />
-</shape>
+  --> 
+<ripple android:color="#00000000"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="3.0dip">
+        <inset android:insetRight="10.0dip">
+            <shape>
+                <solid android:color="@color/notification_guts_bg_color" />
+                <corners android:radius="10.0dip" />
+            </shape>
+        </inset>
+    </item>
+</ripple>
