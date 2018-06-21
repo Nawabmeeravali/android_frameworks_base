@@ -24,14 +24,6 @@
     android:visibility="gone"
     android:orientation="vertical" >
 
-    <View
-        android:id="@+id/zen_embedded_divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginBottom="12dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/qs_tile_divider" />
-
     <include
         android:layout_width="match_parent"
         android:layout_height="48dp"

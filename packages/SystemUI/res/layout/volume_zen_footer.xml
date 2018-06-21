@@ -21,13 +21,6 @@
     android:orientation="vertical"
     android:paddingBottom="8dp" > <!-- extends LinearLayout -->
 
-    <View
-        android:id="@+id/zen_embedded_divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/qs_tile_divider" />
-
     <RelativeLayout
         android:id="@+id/zen_introduction"
         android:layout_width="match_parent"
