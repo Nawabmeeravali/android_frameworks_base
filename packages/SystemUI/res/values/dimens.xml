@@ -226,7 +226,7 @@
     <dimen name="standard_notification_panel_width">416dp</dimen>
 
     <!-- The top margin of the panel that holds the list of notifications. -->
-    <dimen name="notification_panel_margin_top">13dp</dimen>
+    <dimen name="notification_panel_margin_top">3dp</dimen>
 
     <!-- The bottom margin of the panel that holds the list of notifications. -->
     <dimen name="notification_panel_margin_bottom">0dp</dimen>
@@ -352,10 +352,10 @@
     <dimen name="z_distance_between_notifications">5dip</dimen>
 
     <!-- The height of the divider between the individual notifications. -->
-    <dimen name="notification_divider_height">0.5dip</dimen>
+    <dimen name="notification_divider_height">3dp</dimen>
 
     <!-- The corner radius of the shadow behind the notification. -->
-    <dimen name="notification_shadow_radius">7dip</dimen>
+    <dimen name="notification_shadow_radius">13dip</dimen>
 
     <!-- The alpha of the dividing line between child notifications of a notification group. -->
     <item name="notification_divider_alpha" format="float" type="dimen">0.5</item>
