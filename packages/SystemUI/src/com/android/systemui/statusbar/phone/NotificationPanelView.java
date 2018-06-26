@@ -91,7 +91,7 @@ import com.android.systemui.qs.QSContainerImpl;
 import com.android.systemui.qs.QSFragment;
 
 import android.provider.Settings;
-import com.android.internal.utils.du.UserContentObserver;
+import com.android.systemui.UserContentObserver;
 
 import lineageos.providers.LineageSettings;
 
