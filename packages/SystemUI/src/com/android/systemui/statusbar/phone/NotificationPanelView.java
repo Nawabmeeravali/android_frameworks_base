@@ -286,7 +286,7 @@ public class NotificationPanelView extends PanelView implements
     private static int mBlurMixedColorFilter;
     private static int mBlurLightColorFilter;
     private static int mTranslucencyPercentage;
-    private static FadeInAnimation mFadeInAnimation;
+    private static AlphaAnimation mFadeInAnimation;
     private static FrameLayout mInnerBlurredView;
     private static QSContainerImpl mContainer;
     private Handler mHandler = new Handler();
