@@ -286,7 +286,7 @@ public class NotificationPanelView extends PanelView implements
     private static int mBlurMixedColorFilter;
     private static int mBlurLightColorFilter;
     private static int mTranslucencyPercentage;
-    private static AlphaAnimation mAlphaAnimation;
+    private static FadeInAnimation mFadeInAnimation;
     private static FrameLayout mInnerBlurredView;
     private static QSContainerImpl mContainer;
     private Handler mHandler = new Handler();
@@ -2923,7 +2923,7 @@ public class NotificationPanelView extends PanelView implements
                     mBlurredView.setTag("error");
 
                 }
-                mBlurredView.startAnimation(mAlphaAnimation);
+                mBlurredView.startAnimation(mFadeInAnimation);
             }
 
             @Override
@@ -3019,9 +3019,9 @@ public class NotificationPanelView extends PanelView implements
 
             mBlurUtils = new BlurUtils(mNotificationPanelView.getContext());
 
-            mAlphaAnimation = new AlphaAnimation(0.0f, 1.0f);
-            mAlphaAnimation.setDuration(75);
-            mAlphaAnimation.setAnimationListener(mAnimationListener);
+            mFadeInAnimation = new FadeInAnimation(0.0f, 1.0f);
+            mFadeInAnimation.setDuration(550);
+            mFadeInAnimation.setAnimationListener(mAnimationListener);
 
             mBlurredView = new FrameLayout(mNotificationPanelView.getContext());
             mInnerBlurredView = new FrameLayout(mNotificationPanelView.getContext());
