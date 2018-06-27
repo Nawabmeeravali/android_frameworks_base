@@ -3019,7 +3019,7 @@ public class NotificationPanelView extends PanelView implements
 
             mBlurUtils = new BlurUtils(mNotificationPanelView.getContext());
 
-            mFadeInAnimation = new FadeInAnimation(0.0f, 1.0f);
+            mFadeInAnimation = new AlphaAnimation(0.0f, 1.0f);
             mFadeInAnimation.setDuration(550);
             mFadeInAnimation.setAnimationListener(mAnimationListener);
 
