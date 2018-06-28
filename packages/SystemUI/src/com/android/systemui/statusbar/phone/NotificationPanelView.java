@@ -3002,7 +3002,7 @@ public class NotificationPanelView extends PanelView implements
             mBlurRadius = Settings.System.getInt(mContext.getContentResolver(),
                     Settings.System.BLUR_RADIUS_PREFERENCE_KEY, 25);
             mBlurredStatusBarExpandedEnabled = Settings.System.getIntForUser(resolver,
-                    Settings.System.STATUS_BAR_EXPANDED_ENABLED_PREFERENCE_KEY, 0, UserHandle.USER_CURRENT) == 1;
+                    Settings.System.STATUS_BAR_EXPANDED_ENABLED_PREFERENCE_KEY, 1, UserHandle.USER_CURRENT) == 1;
 
             mBlurDarkColorFilter = Settings.System.getInt(mContext.getContentResolver(), 
                     Settings.System.BLUR_DARK_COLOR_PREFERENCE_KEY, Color.LTGRAY);
