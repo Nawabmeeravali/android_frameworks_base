@@ -284,6 +284,7 @@ import java.util.Stack;
 
 import lineageos.hardware.LiveDisplayManager;
 import lineageos.providers.LineageSettings;
+import lineageos.style.StyleInterface;
 
 public class StatusBar extends SystemUI implements DemoMode,
         DragDownHelper.DragDownCallback, ActivityStarter, OnUnlockMethodChangedListener,
@@ -3176,8 +3177,8 @@ public class StatusBar extends SystemUI implements DemoMode,
     public boolean isUsingDarkTheme() {
         OverlayInfo systemuiThemeInfo = null;
         try {
-            systemuiThemeInfo = mOverlayManager.getOverlayInfo("org.lineageos.overlay.dark",
-                    mCurrentUserId);
+            String darkTheme = getDarkOverlay();
+            systemuiThemeInfo = mOverlayManager.getOverlayInfo(darkTheme, mCurrentUserId);
         } catch (RemoteException e) {
             e.printStackTrace();
         }
@@ -3194,6 +3195,12 @@ public class StatusBar extends SystemUI implements DemoMode,
             Log.w(TAG, e.getMessage());
         }
         return false;
+    }
+
+    private String getDarkOverlay() {
+        return LineageSettings.System.getString(mContext.getContentResolver(),
+                LineageSettings.System.BERRY_DARK_OVERLAY,
+                StyleInterface.OVERLAY_DARK_DEFAULT);
     }
 
     @Nullable
@@ -5126,8 +5133,8 @@ public class StatusBar extends SystemUI implements DemoMode,
 
         if (isUsingDarkTheme() != useDarkTheme) {
             try {
-                mOverlayManager.setEnabled("org.lineageos.overlay.dark",
-                        useDarkTheme, mCurrentUserId);
+                String darkOverlay = getDarkOverlay();
+                mOverlayManager.setEnabled(darkOverlay, useDarkTheme, mCurrentUserId);
             } catch (RemoteException e) {
                 Log.w(TAG, "Can't change theme", e);
             }
