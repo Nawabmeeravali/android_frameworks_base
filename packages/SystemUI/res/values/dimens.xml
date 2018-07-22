@@ -193,7 +193,7 @@
     <dimen name="status_bar_header_height">150dp</dimen>
 
     <!-- Height of the status bar header bar in the car setting. -->
-    <dimen name="car_status_bar_header_height">128dp</dimen>
+    <dimen name="car_status_bar_header_height">132dp</dimen>
 
     <!-- The bottom padding of the status bar header. -->
     <dimen name="status_bar_header_padding_bottom">48dp</dimen>
@@ -226,7 +226,7 @@
     <dimen name="standard_notification_panel_width">394dp</dimen>
 
     <!-- The top margin of the panel that holds the list of notifications. -->
-    <dimen name="notification_panel_margin_top">8dp</dimen>
+    <dimen name="notification_panel_margin_top">7dp</dimen>
 
     <!-- The bottom margin of the panel that holds the list of notifications. -->
     <dimen name="notification_panel_margin_bottom">0dp</dimen>
@@ -858,5 +858,7 @@
 
     <!-- Home button padding for sizing -->
     <dimen name="home_padding">15dp</dimen>
+
+    <dimen name="qs_panel_top_margin">52dp</dimen>
 
 </resources>

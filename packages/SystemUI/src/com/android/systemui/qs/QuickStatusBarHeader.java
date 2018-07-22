@@ -15,15 +15,18 @@
 package com.android.systemui.qs;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Rect;
+import android.provider.AlarmClock;
 import android.support.annotation.VisibleForTesting;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextClock;
+import android.widget.TextView;
 
 import com.android.keyguard.CarrierText;
 import com.android.settingslib.Utils;
@@ -33,6 +36,9 @@ import com.android.systemui.R;
 import com.android.systemui.R.id;
 import com.android.systemui.plugins.ActivityStarter;
 import com.android.systemui.qs.QSDetail.Callback;
+import com.android.systemui.qs.TouchAnimator.Builder;
+import com.android.systemui.qs.TouchAnimator.Listener;
+import com.android.systemui.qs.TouchAnimator.ListenerAdapter;
 import com.android.systemui.statusbar.SignalClusterView;
 import com.android.systemui.statusbar.policy.DarkIconDispatcher.DarkReceiver;
 
@@ -48,7 +54,7 @@ public class QuickStatusBarHeader extends RelativeLayout {
 
     protected QuickQSPanel mHeaderQsPanel;
     protected QSTileHost mHost;
-    private CarrierText mCarrierText;
+    private View mDate;
 
     public QuickStatusBarHeader(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -71,15 +77,23 @@ public class QuickStatusBarHeader extends RelativeLayout {
         float intensity = colorForeground == Color.WHITE ? 0 : 1;
         Rect tintArea = new Rect(0, 0, 0, 0);
 
-        applyDarkness(R.id.battery, tintArea, intensity, colorForeground);
-        applyDarkness(R.id.clock, tintArea, intensity, colorForeground);
-
-        mCarrierText = findViewById(R.id.qs_carrier_text);
-
         BatteryMeterView battery = findViewById(R.id.battery);
         battery.setForceShowPercent(true);
 
+        mDate = findViewById(R.id.date);
+
         mActivityStarter = Dependency.get(ActivityStarter.class);
+
+        mDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+			    mActivityStarter.postStartActivityDismissingKeyguard(new Intent(
+                        AlarmClock.ACTION_SHOW_ALARMS), 0);
+			}
+        });
+	    applyDarkness(R.id.battery, tintArea, intensity, colorForeground);
+        applyDarkness(R.id.clock, tintArea, intensity, colorForeground);
+		applyDarkness(R.id.date, tintArea, intensity, colorForeground);
     }
 
     private void applyDarkness(int id, Rect tintArea, float intensity, int color) {
@@ -116,7 +130,6 @@ public class QuickStatusBarHeader extends RelativeLayout {
         if (mExpanded == expanded) return;
         mExpanded = expanded;
         mHeaderQsPanel.setExpanded(expanded);
-        updateEverything();
     }
 
     public void setExpansion(float headerExpansionFraction) {

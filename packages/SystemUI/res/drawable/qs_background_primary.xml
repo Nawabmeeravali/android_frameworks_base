@@ -15,7 +15,7 @@
 -->
 
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-	<item android:top="8dip" android:bottom="8dip">
+	<item>
 		<shape android:shape="rectangle">
 			<solid android:color="@color/qs_background_dark"/>
 			<corners android:radius="@*com.android.systemui:dimen/recents_task_view_rounded_corners_radius" />
