@@ -863,8 +863,6 @@ public final class PowerManagerService extends SystemService
         resolver.registerContentObserver(Settings.System.getUriFor(
                 Settings.System.BUTTON_BACKLIGHT_TIMEOUT),
                 false, mSettingsObserver, UserHandle.USER_ALL);
-<<<<<<< HEAD
-=======
         resolver.registerContentObserver(
                 Settings.System.getUriFor(Settings.System.BUTTON_BACKLIGHT_ON_TOUCH_ONLY),
                 false, mSettingsObserver, UserHandle.USER_ALL);
@@ -880,7 +878,6 @@ public final class PowerManagerService extends SystemService
         resolver.registerContentObserver(Settings.System.getUriFor(
                 Settings.System.WAKELOCK_BLOCKING_LIST),
                 false, mSettingsObserver, UserHandle.USER_ALL);
->>>>>>> 7023d37c3ad... WakelockBlocker [1/2] ported by @faust93
         IVrManager vrManager = (IVrManager) getBinderService(Context.VR_SERVICE);
         if (vrManager != null) {
             try {
